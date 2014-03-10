@@ -1,0 +1,1156 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700);
+/* line 5, ../sass/main.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 9, ../sass/main.scss */
+.clear-fix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 92, ../sass/main.scss */
+html, body {
+  height: 100%;
+  width: 100%; }
+
+/* line 99, ../sass/main.scss */
+body {
+  color: #6a4462;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300; }
+
+/* line 109, ../sass/main.scss */
+h2, .h2 {
+  bottom: 100%;
+  font-size: 4rem;
+  font-weight: 100;
+  left: 1.5rem;
+  line-height: 1;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  position: absolute;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 109, ../sass/main.scss */
+    h2, .h2 {
+      font-size: 5.5rem;
+      left: 2.5rem; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 109, ../sass/main.scss */
+    h2, .h2 {
+      font-size: 5.5rem;
+      left: 2.5rem; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 109, ../sass/main.scss */
+    h2, .h2 {
+      font-size: 6.5rem;
+      left: 4rem; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 109, ../sass/main.scss */
+    h2, .h2 {
+      font-size: 8rem;
+      left: 6rem; } }
+
+/* line 138, ../sass/main.scss */
+h3, .h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1.75rem; }
+
+/* line 149, ../sass/main.scss */
+.background {
+  /*background: {
+  	color: green;
+  }*/
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  background-image: -webkit-linear-gradient(135deg, #ca3d2a, #37629f);
+  background-image: -moz-linear-gradient(135deg, #ca3d2a, #37629f);
+  background-image: -o-linear-gradient(135deg, #ca3d2a, #37629f);
+  background-image: linear-gradient(135deg, #ca3d2a, #37629f); }
+
+/* line 162, ../sass/main.scss */
+.landing-frame {
+  height: 100%;
+  width: 100%; }
+  /* line 168, ../sass/main.scss */
+  .landing-frame:after {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: 0;
+    height: 45%;
+    left: 4.5rem;
+    width: 50%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+    background-image: -moz-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+    background-image: -o-linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(left, #ffffff, rgba(255, 255, 255, 0));
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/ }
+    @media only screen and (min-width: 500px) and (max-width: 999px) {
+      /* line 168, ../sass/main.scss */
+      .landing-frame:after {
+        left: 6.5rem; } }
+    @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+      /* line 168, ../sass/main.scss */
+      .landing-frame:after {
+        left: 6.5rem; } }
+    @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+      /* line 168, ../sass/main.scss */
+      .landing-frame:after {
+        left: 9.5rem; } }
+    @media only screen and (min-width: 1700px) {
+      /* line 168, ../sass/main.scss */
+      .landing-frame:after {
+        left: 13rem; } }
+  /* line 181, ../sass/main.scss */
+  .landing-frame .logo {
+    height: 55%;
+    position: relative; }
+    /* line 186, ../sass/main.scss */
+    .landing-frame .logo:before, .landing-frame .logo:after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-color: white;
+      bottom: 0;
+      height: 100%;
+      width: 0;
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/ }
+      @media only screen and (min-width: 500px) and (max-width: 999px) {
+        /* line 186, ../sass/main.scss */
+        .landing-frame .logo:before, .landing-frame .logo:after {
+          width: 18%; } }
+      @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+        /* line 186, ../sass/main.scss */
+        .landing-frame .logo:before, .landing-frame .logo:after {
+          width: 30%; } }
+      @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+        /* line 186, ../sass/main.scss */
+        .landing-frame .logo:before, .landing-frame .logo:after {
+          width: 35%; } }
+      @media only screen and (min-width: 1700px) {
+        /* line 186, ../sass/main.scss */
+        .landing-frame .logo:before, .landing-frame .logo:after {
+          width: 35%; } }
+    /* line 198, ../sass/main.scss */
+    .landing-frame .logo:before {
+      left: 0; }
+    /* line 202, ../sass/main.scss */
+    .landing-frame .logo:after {
+      right: 0; }
+    /* line 206, ../sass/main.scss */
+    .landing-frame .logo .fill {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/ }
+      @media only screen and (min-width: 500px) and (max-width: 999px) {
+        /* line 206, ../sass/main.scss */
+        .landing-frame .logo .fill {
+          left: 18%;
+          width: 66%; } }
+      @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+        /* line 206, ../sass/main.scss */
+        .landing-frame .logo .fill {
+          left: 30%;
+          width: 40%; } }
+      @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+        /* line 206, ../sass/main.scss */
+        .landing-frame .logo .fill {
+          left: 35%;
+          width: 30%; } }
+      @media only screen and (min-width: 1700px) {
+        /* line 206, ../sass/main.scss */
+        .landing-frame .logo .fill {
+          left: 35%;
+          width: 30%; } }
+      /* line 228, ../sass/main.scss */
+      .landing-frame .logo .fill:before {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: white;
+        bottom: 100%;
+        height: 9999%;
+        left: 0;
+        width: 100%; }
+      /* line 237, ../sass/main.scss */
+      .landing-frame .logo .fill img {
+        height: auto;
+        width: 100%; }
+  /* line 244, ../sass/main.scss */
+  .landing-frame .icon {
+    height: 45%;
+    overflow: hidden;
+    position: relative; }
+    /* line 250, ../sass/main.scss */
+    .landing-frame .icon:before {
+      position: absolute;
+      display: block;
+      content: "";
+      background-color: white;
+      height: 100%;
+      left: 0;
+      top: 0;
+      width: 1.5rem;
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/ }
+      @media only screen and (min-width: 500px) and (max-width: 999px) {
+        /* line 250, ../sass/main.scss */
+        .landing-frame .icon:before {
+          width: 2.5rem; } }
+      @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+        /* line 250, ../sass/main.scss */
+        .landing-frame .icon:before {
+          width: 2.5rem; } }
+      @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+        /* line 250, ../sass/main.scss */
+        .landing-frame .icon:before {
+          width: 4rem; } }
+      @media only screen and (min-width: 1700px) {
+        /* line 250, ../sass/main.scss */
+        .landing-frame .icon:before {
+          width: 6rem; } }
+    /* line 263, ../sass/main.scss */
+    .landing-frame .icon:after {
+      position: absolute;
+      display: block;
+      content: "";
+      height: 100%;
+      left: 4.5rem;
+      top: 0;
+      width: 9999%;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0.5)));
+      background-image: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.5));
+      background-image: -moz-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.5));
+      background-image: -o-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.5));
+      background-image: linear-gradient(top, #ffffff, rgba(255, 255, 255, 0.5));
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/ }
+      @media only screen and (min-width: 500px) and (max-width: 999px) {
+        /* line 263, ../sass/main.scss */
+        .landing-frame .icon:after {
+          left: 6.5rem; } }
+      @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+        /* line 263, ../sass/main.scss */
+        .landing-frame .icon:after {
+          left: 6.5rem; } }
+      @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+        /* line 263, ../sass/main.scss */
+        .landing-frame .icon:after {
+          left: 9.5rem; } }
+      @media only screen and (min-width: 1700px) {
+        /* line 263, ../sass/main.scss */
+        .landing-frame .icon:after {
+          left: 13rem; } }
+    /* line 276, ../sass/main.scss */
+    .landing-frame .icon .fill {
+      background-color: transparent;
+      bottom: 1.5rem;
+      position: absolute;
+      height: 3rem;
+      left: 1.5rem;
+      width: 3rem;
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/ }
+      @media only screen and (min-width: 500px) and (max-width: 999px) {
+        /* line 276, ../sass/main.scss */
+        .landing-frame .icon .fill {
+          bottom: 2.5rem;
+          height: 4rem;
+          left: 2.5rem;
+          width: 4rem; } }
+      @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+        /* line 276, ../sass/main.scss */
+        .landing-frame .icon .fill {
+          bottom: 2.5rem;
+          height: 4rem;
+          left: 2.5rem;
+          width: 4rem; } }
+      @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+        /* line 276, ../sass/main.scss */
+        .landing-frame .icon .fill {
+          bottom: 4rem;
+          height: 5.5rem;
+          left: 4rem;
+          width: 5.5rem; } }
+      @media only screen and (min-width: 1700px) {
+        /* line 276, ../sass/main.scss */
+        .landing-frame .icon .fill {
+          bottom: 6rem;
+          height: 7rem;
+          left: 6rem;
+          width: 7rem; } }
+      /* line 308, ../sass/main.scss */
+      .landing-frame .icon .fill:before, .landing-frame .icon .fill:after {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: white;
+        height: 9999%;
+        left: 0;
+        width: 100%; }
+      /* line 316, ../sass/main.scss */
+      .landing-frame .icon .fill:before {
+        bottom: 100%; }
+      /* line 320, ../sass/main.scss */
+      .landing-frame .icon .fill:after {
+        top: 100%; }
+  /* line 326, ../sass/main.scss */
+  .landing-frame .shadow {
+    height: 5rem;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    width: 100%; }
+    /* line 333, ../sass/main.scss */
+    .landing-frame .shadow:before {
+      position: absolute;
+      display: block;
+      content: "";
+      bottom: 100%;
+      height: 1.5rem;
+      width: 100%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.5); }
+
+/* line 344, ../sass/main.scss */
+nav {
+  display: none;
+  left: 1.5rem;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 344, ../sass/main.scss */
+    nav {
+      display: block;
+      left: 2.5rem; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 344, ../sass/main.scss */
+    nav {
+      display: block;
+      left: 2.5rem; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 344, ../sass/main.scss */
+    nav {
+      display: block;
+      left: 4rem; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 344, ../sass/main.scss */
+    nav {
+      display: block;
+      left: 6rem; } }
+  /* line 364, ../sass/main.scss */
+  nav.scroll {
+    position: absolute;
+    top: 100%; }
+  /* line 369, ../sass/main.scss */
+  nav.fixed {
+    position: fixed;
+    top: 0; }
+  /* line 374, ../sass/main.scss */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  /* line 380, ../sass/main.scss */
+  nav li {
+    border: 2px solid white;
+    margin-top: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/ }
+    @media only screen and (min-width: 500px) and (max-width: 999px) {
+      /* line 380, ../sass/main.scss */
+      nav li {
+        margin-top: 2.5rem;
+        height: 4rem;
+        width: 4rem; } }
+    @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+      /* line 380, ../sass/main.scss */
+      nav li {
+        margin-top: 2.5rem;
+        height: 4rem;
+        width: 4rem; } }
+    @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+      /* line 380, ../sass/main.scss */
+      nav li {
+        margin-top: 4rem;
+        height: 5.5rem;
+        width: 5.5rem; } }
+    @media only screen and (min-width: 1700px) {
+      /* line 380, ../sass/main.scss */
+      nav li {
+        margin-top: 6rem;
+        height: 7rem;
+        width: 7rem; } }
+
+/* line 410, ../sass/main.scss */
+.module-container {
+  margin: 10.5rem 0 0 0;
+  position: relative;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 410, ../sass/main.scss */
+    .module-container {
+      margin: 15rem 0 0 9rem; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 410, ../sass/main.scss */
+    .module-container {
+      margin: 15rem 0 0 9rem; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 410, ../sass/main.scss */
+    .module-container {
+      margin: 16rem 0 0 13.5rem; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 410, ../sass/main.scss */
+    .module-container {
+      margin: 18rem 0 0 19rem; } }
+
+/* line 422, ../sass/main.scss */
+.module-container.hello h2 {
+  color: white; }
+/* line 426, ../sass/main.scss */
+.module-container.hello:before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-bottom: 1rem solid white;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  bottom: 100%;
+  height: 0;
+  left: 3rem;
+  width: 0;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 426, ../sass/main.scss */
+    .module-container.hello:before {
+      left: 5rem; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 426, ../sass/main.scss */
+    .module-container.hello:before {
+      left: 5rem; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 426, ../sass/main.scss */
+    .module-container.hello:before {
+      left: 8rem; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 426, ../sass/main.scss */
+    .module-container.hello:before {
+      left: 12rem; } }
+
+/* line 443, ../sass/main.scss */
+.intro {
+  background-color: white;
+  font-size: 1.75rem;
+  font-weight: 100;
+  margin: 0;
+  padding: 1.5rem;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 443, ../sass/main.scss */
+    .intro {
+      padding: 2.5rem; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 443, ../sass/main.scss */
+    .intro {
+      padding: 2.5rem; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 443, ../sass/main.scss */
+    .intro {
+      padding: 4rem; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 443, ../sass/main.scss */
+    .intro {
+      padding: 6rem; } }
+  /* line 457, ../sass/main.scss */
+  .intro p {
+    margin: 0;
+    width: 100%;
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/ }
+    @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+      /* line 457, ../sass/main.scss */
+      .intro p {
+        width: 66.66666666%; } }
+    @media only screen and (min-width: 1700px) {
+      /* line 457, ../sass/main.scss */
+      .intro p {
+        width: 66.66666666%; } }
+
+/* line 465, ../sass/main.scss */
+.points {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.5rem 0 0;
+  position: relative;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 465, ../sass/main.scss */
+    .points {
+      padding: 0 2.5rem 0 0; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 465, ../sass/main.scss */
+    .points {
+      padding: 0 2.5rem 0 0; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 465, ../sass/main.scss */
+    .points {
+      padding: 0 4rem 0 0; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 465, ../sass/main.scss */
+    .points {
+      padding: 0 6rem 0 0; } }
+  /* line 475, ../sass/main.scss */
+  .points:before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: white;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 1.5rem;
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/ }
+    @media only screen and (min-width: 500px) and (max-width: 999px) {
+      /* line 475, ../sass/main.scss */
+      .points:before {
+        width: 2.5rem; } }
+    @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+      /* line 475, ../sass/main.scss */
+      .points:before {
+        width: 2.5rem; } }
+    @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+      /* line 475, ../sass/main.scss */
+      .points:before {
+        width: 4rem; } }
+    @media only screen and (min-width: 1700px) {
+      /* line 475, ../sass/main.scss */
+      .points:before {
+        width: 6rem; } }
+  /* line 488, ../sass/main.scss */
+  .points li {
+    float: left;
+    overflow: hidden;
+    padding: 0 0 0 1.5rem;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/ }
+    @media only screen and (min-width: 500px) and (max-width: 999px) {
+      /* line 488, ../sass/main.scss */
+      .points li {
+        padding: 0 0 0 2.5rem; } }
+    @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+      /* line 488, ../sass/main.scss */
+      .points li {
+        padding: 0 0 0 2.5rem;
+        width: 33.33333333333%; } }
+    @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+      /* line 488, ../sass/main.scss */
+      .points li {
+        padding: 0 0 0 4rem;
+        width: 33.33333333333%; } }
+    @media only screen and (min-width: 1700px) {
+      /* line 488, ../sass/main.scss */
+      .points li {
+        padding: 0 0 0 6rem;
+        width: 33.33333333333%; } }
+    /* line 512, ../sass/main.scss */
+    .points li .icon {
+      background-color: transparent;
+      background-image: url(../img/icon-sprite.svg);
+      background-repeat: no-repeat;
+      background-size: 30rem 3rem;
+      height: 100%;
+      left: 0;
+      margin-left: 1.5rem;
+      position: absolute;
+      width: 3rem;
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/
+      /*@if $point == TINY{
+      	@media only screen and (max-width: 499px){ @content;}
+      }*/ }
+      @media only screen and (min-width: 500px) and (max-width: 999px) {
+        /* line 512, ../sass/main.scss */
+        .points li .icon {
+          background-size: 40rem 4rem;
+          margin-left: 2.5rem;
+          width: 4rem; } }
+      @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+        /* line 512, ../sass/main.scss */
+        .points li .icon {
+          background-size: 40rem 4rem;
+          margin-left: 2.5rem;
+          width: 4rem; } }
+      @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+        /* line 512, ../sass/main.scss */
+        .points li .icon {
+          background-size: 55rem 5.5rem;
+          margin-left: 4rem;
+          width: 5.5rem; } }
+      @media only screen and (min-width: 1700px) {
+        /* line 512, ../sass/main.scss */
+        .points li .icon {
+          background-size: 70rem 7rem;
+          margin-left: 6rem;
+          width: 7rem; } }
+      /* line 545, ../sass/main.scss */
+      .points li .icon.design {
+        background-position: 0 top; }
+      /* line 549, ../sass/main.scss */
+      .points li .icon.development {
+        background-position: -3rem top;
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/ }
+        @media only screen and (min-width: 500px) and (max-width: 999px) {
+          /* line 549, ../sass/main.scss */
+          .points li .icon.development {
+            background-position: -4rem top; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+          /* line 549, ../sass/main.scss */
+          .points li .icon.development {
+            background-position: -4rem top; } }
+        @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+          /* line 549, ../sass/main.scss */
+          .points li .icon.development {
+            background-position: -5.5rem top; } }
+        @media only screen and (min-width: 1700px) {
+          /* line 549, ../sass/main.scss */
+          .points li .icon.development {
+            background-position: -7rem top; } }
+      /* line 558, ../sass/main.scss */
+      .points li .icon.dedication {
+        background-position: -6rem top;
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/ }
+        @media only screen and (min-width: 500px) and (max-width: 999px) {
+          /* line 558, ../sass/main.scss */
+          .points li .icon.dedication {
+            background-position: -8rem top; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+          /* line 558, ../sass/main.scss */
+          .points li .icon.dedication {
+            background-position: -8rem top; } }
+        @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+          /* line 558, ../sass/main.scss */
+          .points li .icon.dedication {
+            background-position: -11rem top; } }
+        @media only screen and (min-width: 1700px) {
+          /* line 558, ../sass/main.scss */
+          .points li .icon.dedication {
+            background-position: -14rem top; } }
+      /* line 567, ../sass/main.scss */
+      .points li .icon:before {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: white;
+        height: 3rem;
+        left: -1.5rem;
+        top: 0;
+        width: 1.5rem;
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/ }
+        @media only screen and (min-width: 500px) and (max-width: 999px) {
+          /* line 567, ../sass/main.scss */
+          .points li .icon:before {
+            height: 4rem;
+            left: -2.5rem;
+            width: 2.5rem; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+          /* line 567, ../sass/main.scss */
+          .points li .icon:before {
+            height: 4rem;
+            left: -2.5rem;
+            width: 2.5rem; } }
+        @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+          /* line 567, ../sass/main.scss */
+          .points li .icon:before {
+            height: 5.5rem;
+            left: -4rem;
+            width: 4rem; } }
+        @media only screen and (min-width: 1700px) {
+          /* line 567, ../sass/main.scss */
+          .points li .icon:before {
+            height: 7rem;
+            left: -6rem;
+            width: 6rem; } }
+      /* line 596, ../sass/main.scss */
+      .points li .icon:after {
+        position: absolute;
+        display: block;
+        content: "";
+        background-color: white;
+        height: 100%;
+        left: -1.5rem;
+        top: 3rem;
+        width: 4.5rem;
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/ }
+        @media only screen and (min-width: 500px) and (max-width: 999px) {
+          /* line 596, ../sass/main.scss */
+          .points li .icon:after {
+            left: -2.5rem;
+            top: 4rem;
+            width: 6.5rem; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+          /* line 596, ../sass/main.scss */
+          .points li .icon:after {
+            left: -2.5rem;
+            top: 4rem;
+            width: 6.5rem; } }
+        @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+          /* line 596, ../sass/main.scss */
+          .points li .icon:after {
+            left: -4rem;
+            top: 5.5rem;
+            width: 9.5rem; } }
+        @media only screen and (min-width: 1700px) {
+          /* line 596, ../sass/main.scss */
+          .points li .icon:after {
+            left: -6rem;
+            top: 7rem;
+            width: 13rem; } }
+    /* line 626, ../sass/main.scss */
+    .points li .description {
+      position: relative;
+      z-index: 1; }
+      /* line 636, ../sass/main.scss */
+      .points li .description h3 {
+        background-color: white;
+        margin-left: 3rem;
+        padding-left: 0.75rem;
+        padding-top: 0.25rem;
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/ }
+        @media only screen and (min-width: 500px) and (max-width: 999px) {
+          /* line 636, ../sass/main.scss */
+          .points li .description h3 {
+            margin-left: 4rem;
+            padding-left: 1.25rem;
+            padding-top: 0.5rem; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+          /* line 636, ../sass/main.scss */
+          .points li .description h3 {
+            font-size: 1.5rem;
+            margin-left: 4rem;
+            padding-left: 1.25rem;
+            padding-top: 0.75rem; } }
+        @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+          /* line 636, ../sass/main.scss */
+          .points li .description h3 {
+            margin-left: 5.5rem;
+            padding-left: 1.33333rem;
+            padding-top: 0.25rem; } }
+        @media only screen and (min-width: 1700px) {
+          /* line 636, ../sass/main.scss */
+          .points li .description h3 {
+            margin-left: 7rem;
+            padding-left: 1.5rem;
+            padding-top: 0.25rem; } }
+      /* line 664, ../sass/main.scss */
+      .points li .description p {
+        background-color: white;
+        margin: 0;
+        padding: 0 0 1.5rem 0;
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/
+        /*@if $point == TINY{
+        	@media only screen and (max-width: 499px){ @content;}
+        }*/ }
+        @media only screen and (min-width: 500px) and (max-width: 999px) {
+          /* line 664, ../sass/main.scss */
+          .points li .description p {
+            padding: 0 0 2.5rem 0; } }
+        @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+          /* line 664, ../sass/main.scss */
+          .points li .description p {
+            padding: 0 0 2.5rem 0; } }
+        @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+          /* line 664, ../sass/main.scss */
+          .points li .description p {
+            margin: 0 0 0 5.5rem;
+            padding: 0 0 4rem 1.33333rem; } }
+        @media only screen and (min-width: 1700px) {
+          /* line 664, ../sass/main.scss */
+          .points li .description p {
+            margin: 0 0 0 7rem;
+            padding: 0 0 6rem 1.5rem; } }
+
+/* line 685, ../sass/main.scss */
+.module-container.work h2 {
+  color: rgba(0, 0, 0, 0.5); }
+/* line 689, ../sass/main.scss */
+.module-container.work:before {
+  position: absolute;
+  display: block;
+  content: "";
+  border-bottom: 1rem solid rgba(0, 0, 0, 0.5);
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  bottom: 100%;
+  height: 0;
+  left: 3rem;
+  width: 0;
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/
+  /*@if $point == TINY{
+  	@media only screen and (max-width: 499px){ @content;}
+  }*/ }
+  @media only screen and (min-width: 500px) and (max-width: 999px) {
+    /* line 689, ../sass/main.scss */
+    .module-container.work:before {
+      left: 5rem; } }
+  @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+    /* line 689, ../sass/main.scss */
+    .module-container.work:before {
+      left: 5rem; } }
+  @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+    /* line 689, ../sass/main.scss */
+    .module-container.work:before {
+      left: 8rem; } }
+  @media only screen and (min-width: 1700px) {
+    /* line 689, ../sass/main.scss */
+    .module-container.work:before {
+      left: 12rem; } }
+
+/* line 706, ../sass/main.scss */
+.tiles {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 711, ../sass/main.scss */
+  .tiles li {
+    float: left;
+    margin: 0 0 2px 0;
+    width: 100%;
+    /*
+     * change the number of title per row depending on screen size
+     * if the number per row > 1 then we need to put left and right padding on the tile spacer to create their seperation
+     */
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/
+    /*@if $point == TINY{
+    	@media only screen and (max-width: 499px){ @content;}
+    }*/ }
+    @media only screen and (min-width: 450px) and (max-width: 499px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 50% !important; }
+        /* line 722, ../sass/main.scss */
+        .tiles li .spacer {
+          padding: 0 1px 0 1px !important; } }
+    @media only screen and (min-width: 500px) and (max-width: 599px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 100% !important; } }
+    @media only screen and (min-width: 500px) and (max-width: 999px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 50%; }
+        /* line 729, ../sass/main.scss */
+        .tiles li .spacer {
+          padding: 0 1px 0 1px; } }
+    @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 33.33333333333%; }
+        /* line 735, ../sass/main.scss */
+        .tiles li .spacer {
+          padding: 0 1px 0 1px; } }
+    @media only screen and (min-width: 1300px) and (max-width: 1699px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 33.33333333333%; }
+        /* line 741, ../sass/main.scss */
+        .tiles li .spacer {
+          padding: 0 1px 0 1px; } }
+    @media only screen and (min-width: 1700px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 33.33333333333%; }
+        /* line 747, ../sass/main.scss */
+        .tiles li .spacer {
+          padding: 0 1px 0 1px; } }
+    @media only screen and (min-width: 1800px) {
+      /* line 711, ../sass/main.scss */
+      .tiles li {
+        width: 25% !important; }
+        /* line 753, ../sass/main.scss */
+        .tiles li .spacer {
+          padding: 0 1px 0 1px !important; } }
+    /* line 758, ../sass/main.scss */
+    .tiles li .spacer {
+      height: auto;
+      width: 100%; }

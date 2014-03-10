@@ -1,0 +1,771 @@
+@import "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700);
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+.clear-fix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+// color values
+//$shadow: rgba(black, 0.25);
+$blackA: rgba(black, 0.5);
+$gray: #787878; // generic
+$grayD: darken($gray, 25%); // dark
+$grayL: lighten($gray, 35%); // light
+$graySL: lighten($gray, 45%); // super light
+
+// generic values
+$ani: 0.25s;
+
+$padT: 1.5rem; // TINY
+$padS: 2.5rem; // SMALL
+$padM: 2.5rem; // MEDIUM
+$padL: 4rem; // LARGE
+$padH: 6rem; // HUGE
+
+$cirT: 3rem; // TINY
+$cirS: 4rem; //SMALL
+$cirM: 4rem; //MEDIUM
+$cirL: 5.5rem; // LARGE
+$cirH: 7rem; // HUGE
+
+@mixin breakpoint($point){
+
+	/*@if $point == TINY{
+		@media only screen and (max-width: 499px){ @content;}
+	}*/
+
+	@if $point == SMALL{
+		@media only screen and (min-width: 500px) and (max-width: 999px){ @content;}
+	}
+
+	@else if $point == MEDIUM{
+		@media only screen and (min-width: 1000px) and (max-width: 1299px){ @content;}
+	}
+
+	@else if $point == LARGE{
+		@media only screen and (min-width: 1300px) and (max-width: 1699px){ @content;}
+	}
+
+	@else if $point == HUGE{
+		@media only screen and (min-width: 1700px){@content;}
+	}
+
+}
+
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+@mixin pseudo{
+	position: absolute;
+	display: block;
+	content: "";
+}
+
+@mixin keyframes($aniName){
+
+    @-webkit-keyframes $aniName{
+        @content;
+    }
+    @-moz-keyframes $aniName{
+        @content;
+    }
+    @-o-keyframes $aniName{
+        @content;
+    }
+    @keyframes $aniName{
+        @content;
+    }
+}
+
+html, body{
+	height: 100%; // is this messing up the vertical scrolling on some devices?
+	// overflow-x: hidden;
+	width: 100%;
+}
+
+
+body{
+	color: #6a4462;
+	font: {
+		family: 'Roboto', sans-serif;
+		size: 1rem;
+		style: normal;
+		weight: 300;
+	}
+}
+
+h2, .h2{
+	bottom: 100%;
+	font: {
+		size: 4rem;
+		weight: 100;
+	}
+	left: $padT;
+	line-height: 1;
+	margin: 0 0 2rem 0;
+	padding: 0;
+	position: absolute;
+	@include breakpoint(SMALL){ 
+		font-size: 5.5rem;
+		left: $padS;
+	}
+	@include breakpoint(MEDIUM){ 
+		font-size: 5.5rem;
+		left: $padM;
+	}
+	@include breakpoint(LARGE){ 
+		font-size: 6.5rem;
+		left: $padL;
+	}
+	@include breakpoint(HUGE){ 
+		font-size: 8rem;
+		left: $padH;
+	}
+}
+
+h3, .h3{
+	$size: 1.75rem;
+	font: {
+		size: $size;
+		weight: 700;
+	}
+	margin: 0; // reset margin before putting in new values
+	padding: 0; // reset padding before putting in new values
+	padding-bottom: $size;
+}
+
+.background{
+	/*background: {
+		color: green;
+	}*/
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+	@include background-image(linear-gradient(135deg, #ca3d2a, #37629f));
+}
+
+.landing-frame{
+	height: 100%;
+	//max-height: 70rem;
+	width: 100%;
+	//@include background-image(linear-gradient(top, white, white, rgba(white, 0.5)));
+
+	&:after{ // the side gradient that makes up the icon shell
+		@include pseudo;
+		bottom: 0;
+		height: 45%;
+		left: $padT + $cirT;
+		width: 50%;
+		@include background-image(linear-gradient(left, white, rgba(white, 0)));
+		@include breakpoint(SMALL){left: $padS + $cirS;}
+		@include breakpoint(MEDIUM){left: $padM + $cirM;}
+		@include breakpoint(LARGE){left: $padL + $cirL;}
+		@include breakpoint(HUGE){left: $padH + $cirH;}
+	}
+
+	.logo{
+		//background-color: white;
+		height: 55%;
+		position: relative;
+
+		&:before, &:after{
+			@include pseudo;
+			background-color: white;
+			bottom: 0;
+			height: 100%;
+			width: 0;
+			@include breakpoint(SMALL){width: 18%;}
+			@include breakpoint(MEDIUM){width: 30%;}
+			@include breakpoint(LARGE){width: 35%;}
+			@include breakpoint(HUGE){width: 35%;}
+		}
+
+		&:before{
+			left: 0;
+		}
+
+		&:after{
+			right: 0;
+		}
+
+		.fill{
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			@include breakpoint(SMALL){
+				left: 18%;
+				width: 66%;
+			}
+			@include breakpoint(MEDIUM){
+				left: 30%;
+				width: 40%;
+			}
+			@include breakpoint(LARGE){
+				left: 35%;
+				width: 30%;
+			}
+			@include breakpoint(HUGE){
+				left: 35%;
+				width: 30%;
+			}
+
+			&:before{
+				@include pseudo;
+				background-color: white;
+				bottom: 100%;
+				height: 9999%;
+				left: 0;
+				width: 100%;
+			}
+
+			img{
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+
+	.icon{
+		height: 45%;
+		overflow: hidden;
+		position: relative;
+		//@include background-image(linear-gradient(top, white, rgba(white, 0.5)));
+
+		&:before{
+			@include pseudo;
+			background-color: white;
+			height: 100%;
+			left: 0;
+			top: 0;
+			width: $padT;
+			@include breakpoint(SMALL){width: $padS;}
+			@include breakpoint(MEDIUM){width: $padM;}
+			@include breakpoint(LARGE){width: $padL;}
+			@include breakpoint(HUGE){width: $padH;}
+		}
+
+		&:after{
+			@include pseudo;
+			height: 100%;
+			left: $padT + $cirT;
+			top: 0;
+			width: 9999%;
+			@include background-image(linear-gradient(top, white, rgba(white, 0.5)));
+			@include breakpoint(SMALL){left: $padS + $cirS;}
+			@include breakpoint(MEDIUM){left: $padM + $cirM;}
+			@include breakpoint(LARGE){left: $padL + $cirL;}
+			@include breakpoint(HUGE){left: $padH + $cirH;}
+		}
+
+		.fill{
+			background-color: transparent;
+			bottom: $padT;
+			position: absolute;
+			height: $cirT;
+			left: $padT;
+			width: $cirT;
+			@include breakpoint(SMALL){
+				bottom: $padS;
+				height: $cirS;
+				left: $padS;
+				width: $cirS;
+			}
+			@include breakpoint(MEDIUM){
+				bottom: $padM;
+				height: $cirM;
+				left: $padM;
+				width: $cirM;
+			}
+			@include breakpoint(LARGE){
+				bottom: $padL;
+				height: $cirL;
+				left: $padL;
+				width: $cirL;
+			}
+			@include breakpoint(HUGE){
+				bottom: $padH;
+				height: $cirH;
+				left: $padH;
+				width: $cirH;
+			}
+
+			&:before, &:after{
+				@include pseudo;
+				background-color: white;
+				height: 9999%;
+				left: 0;
+				width: 100%
+			}
+
+			&:before{
+				bottom: 100%;
+			}
+
+			&:after{
+				top: 100%;
+			}
+		}
+	}
+
+	.shadow{
+		height: 5rem;
+		overflow: hidden;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+
+		&:before{
+			@include pseudo;
+			bottom: 100%;
+			height: 1.5rem;
+			width: 100%;
+			@include border-radius(50%);
+			@include box-shadow(0 0 3rem 0 rgba(black, 0.5));
+		}
+	}
+}
+
+nav{
+	display: none;
+	left: $padT;
+	@include breakpoint(SMALL){
+		display: block;
+		left: $padS;
+	}
+	@include breakpoint(MEDIUM){
+		display: block;
+		left: $padM;
+	}
+	@include breakpoint(LARGE){
+		display: block;
+		left: $padL;
+	}	
+	@include breakpoint(HUGE){
+		display: block;
+		left: $padH;
+	}
+
+	&.scroll{
+		position: absolute;
+		top: 100%;
+	}
+
+	&.fixed{
+		position: fixed;
+		top: 0;
+	}
+
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li{
+		//background-color: blue;
+		border: 2px solid white;
+		margin-top: $padT;
+		height: $cirT;
+		width: $cirT;
+		@include border-radius(50%);
+		@include breakpoint(SMALL){
+			margin-top: $padS;
+			height: $cirS;
+			width: $cirS;
+		}
+		@include breakpoint(MEDIUM){
+			margin-top: $padM;
+			height: $cirM;
+			width: $cirM;
+		}
+		@include breakpoint(LARGE){
+			margin-top: $padL;
+			height: $cirL;
+			width: $cirL;
+		}
+		@include breakpoint(HUGE){
+			margin-top: $padH;
+			height: $cirH;
+			width: $cirH;
+		}
+	}
+}
+
+.module-container{
+	margin: ($padT * 7) 0 0 0;
+	position: relative;
+	// @include box-shadow(0 0 50px 0 rgba(black, 0.25));
+	@include breakpoint(SMALL){margin: ($padS * 6) 0 0 ($padS + $cirS + $padS);}
+	@include breakpoint(MEDIUM){margin: ($padM * 6) 0 0 ($padM + $cirM + $padM);}
+	@include breakpoint(LARGE){margin: ($padL * 4) 0 0 ($padL + $cirL + $padL);}
+	@include breakpoint(HUGE){margin: ($padH * 3) 0 0 ($padH + $cirH + $padH);}
+}
+
+.module-container.hello{
+
+	h2{
+		color: white;
+	}
+
+	&:before{
+		$tri: 1rem;
+		@include pseudo;
+		border-bottom: $tri solid white;
+		border-left: $tri solid transparent;
+		border-right: $tri solid transparent;
+		bottom: 100%;
+		height: 0;
+		left: $padT * 2;
+		width: 0;
+		@include breakpoint(SMALL){left: $padS * 2;}
+		@include breakpoint(MEDIUM){left: $padM * 2;}
+		@include breakpoint(LARGE){left: $padL * 2;}
+		@include breakpoint(HUGE){left: $padH * 2;}
+	}
+}
+
+.intro{
+	background-color: white;
+	font: {
+		//size: 2.5rem;
+		size: 1.75rem;
+		weight: 100;
+	}
+	margin: 0;
+	padding: $padT;
+	@include breakpoint(SMALL){padding: $padS;}
+	@include breakpoint(MEDIUM){padding: $padM;}
+	@include breakpoint(LARGE){padding: $padL;}
+	@include breakpoint(HUGE){padding: $padH;}
+
+	p{
+		margin: 0;
+		width: 100%;
+		@include breakpoint(LARGE){width: 66.66666666%;}
+		@include breakpoint(HUGE){width: 66.66666666%;}
+	}
+}
+
+.points{
+	list-style: none;
+	margin: 0;
+	padding: 0 $padT 0 0;
+	position: relative;
+	@include breakpoint(SMALL){padding: 0 $padS 0 0;}
+	@include breakpoint(MEDIUM){padding: 0 $padM 0 0;}
+	@include breakpoint(LARGE){padding: 0 $padL 0 0;}
+	@include breakpoint(HUGE){padding: 0 $padH 0 0;}
+
+	&:before{
+		@include pseudo;
+		background-color: white;
+		height: 100%;
+		right: 0;
+		top: 0;
+		width: $padT;
+		@include breakpoint(SMALL){width: $padS;}
+		@include breakpoint(MEDIUM){width: $padM;}
+		@include breakpoint(LARGE){width: $padL;}
+		@include breakpoint(HUGE){width: $padH;}
+	}
+
+	li{
+		float: left;
+		overflow: hidden;
+		padding: 0 0 0 $padT;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		@include breakpoint(SMALL){
+			padding: 0 0 0 $padS;
+			//width: 33.33333333333%;
+		}
+		@include breakpoint(MEDIUM){
+			padding: 0 0 0 $padM;
+			width: 33.33333333333%;
+		}
+		@include breakpoint(LARGE){
+			padding: 0 0 0 $padL;
+			width: 33.33333333333%;
+		}
+		@include breakpoint(HUGE){
+			padding: 0 0 0 $padH;
+			width: 33.33333333333%;
+		}
+
+		.icon{
+			background: {
+				color: transparent;
+				image: url(../img/icon-sprite.svg);
+				repeat: no-repeat;
+				size: ($cirT * 10) $cirT;
+			}
+			height: 100%;
+			left: 0;
+			margin-left: $padT;
+			position: absolute;
+			width: $cirT;
+			@include breakpoint(SMALL){
+				background-size: ($cirS * 10) $cirS;
+				margin-left: $padS;
+				width: $cirS;
+			}
+			@include breakpoint(MEDIUM){
+				background-size: ($cirM * 10) $cirM;
+				margin-left: $padM;
+				width: $cirM;
+			}
+			@include breakpoint(LARGE){
+				background-size: ($cirL * 10) $cirL;
+				margin-left: $padL;
+				width: $cirL;
+			}
+			@include breakpoint(HUGE){
+				background-size: ($cirH * 10) $cirH;
+				margin-left: $padH;
+				width: $cirH;
+			}
+
+			&.design{
+				background-position: 0 top;
+			}
+
+			&.development{
+				$mod: 1;
+				background-position: (- $cirT) top;
+				@include breakpoint(SMALL){background-position: (- $cirS * $mod) top;}
+				@include breakpoint(MEDIUM){background-position: (- $cirM * $mod) top;}
+				@include breakpoint(LARGE){background-position: (- $cirL * $mod) top;}
+				@include breakpoint(HUGE){background-position: (- $cirH * $mod) top;}
+			}
+
+			&.dedication{
+				$mod: 2;
+				background-position: (- $cirT * 2) top;
+				@include breakpoint(SMALL){background-position: (- $cirS * $mod) top;}
+				@include breakpoint(MEDIUM){background-position: (- $cirM * $mod) top;}
+				@include breakpoint(LARGE){background-position: (- $cirL * $mod) top;}
+				@include breakpoint(HUGE){background-position: (- $cirH * $mod) top;}
+			}
+
+			&:before{
+				@include pseudo;
+				background-color: white;
+				height: $cirT;
+				left: -$padT;
+				top: 0;
+				width: $padT;
+				@include breakpoint(SMALL){
+					height: $cirS;
+					left: -$padS;
+					width: $padS;
+				}
+				@include breakpoint(MEDIUM){
+					height: $cirM;
+					left: -$padM;
+					width: $padM;
+				}
+				@include breakpoint(LARGE){
+					height: $cirL;
+					left: -$padL;
+					width: $padL;
+				}
+				@include breakpoint(HUGE){
+					height: $cirH;
+					left: -$padH;
+					width: $padH;
+				}
+			}
+
+			&:after{
+				@include pseudo;
+				background-color: white;
+				height: 100%;
+				left: -$padT;
+				top: $cirT;
+				width: $padT + $cirT;
+				@include breakpoint(SMALL){
+					left: -$padS;
+					top: $cirS;
+					width: $padS + $cirS;
+				}
+				@include breakpoint(MEDIUM){
+					left: -$padM;
+					top: $cirM;
+					width: $padM + $cirM;
+				}
+				@include breakpoint(LARGE){
+					left: -$padL;
+					top: $cirL;
+					width: $padL + $cirL;
+				}
+				@include breakpoint(HUGE){
+					left: -$padH;
+					top: $cirH;
+					width: $padH + $cirH;
+				}
+			}
+		}
+
+		.description{
+			position: relative;
+			z-index: 1;
+
+			$iconPadT: $padT / 2;
+			$iconPadS: $padS / 2;
+			$iconPadM: $padM / 2;
+			$iconPadL: $padL / 3;
+			$iconPadH: $padH / 4;
+
+			h3{
+				background-color: white;
+				margin-left: $cirT;
+				padding-left: $iconPadT;
+				padding-top: 0.25rem; // align centered with the icon
+				@include breakpoint(SMALL){
+					margin-left: $cirS;
+					padding-left: $iconPadS;
+					padding-top: 0.5rem; // align centered with the icon
+				}	
+				@include breakpoint(MEDIUM){
+					font-size: 1.5rem; // shrink the h3 text sightly to fint into the intital 3 column layout better
+					margin-left: $cirM;
+					padding-left: $iconPadM;
+					padding-top: 0.75rem; // align centered with the icon
+				}	
+				@include breakpoint(LARGE){
+					margin-left: $cirL;
+					padding-left: $iconPadL;
+					padding-top: 0.25rem; // align centered with the icon
+				}	
+				@include breakpoint(HUGE){
+					margin-left: $cirH;
+					padding-left: $iconPadH;
+					padding-top: 0.25rem; // align centered with the icon
+				}
+			}
+
+			p{
+				background-color: white;
+				margin: 0;
+				padding: 0 0 $padT 0;
+				@include breakpoint(SMALL){padding: 0 0 $padS 0;}
+				@include breakpoint(MEDIUM){padding: 0 0 $padM 0;}
+				@include breakpoint(LARGE){
+					margin: 0 0 0 $cirL;
+					padding: 0 0 $padL $iconPadL;
+				}
+				@include breakpoint(HUGE){
+					margin: 0 0 0 $cirH;
+					padding: 0 0 $padH $iconPadH;
+				}
+			}
+		}
+	}
+}
+
+.module-container.work{
+
+	h2{
+		color: $blackA;
+	}
+
+	&:before{
+		$tri: 1rem;
+		@include pseudo;
+		border-bottom: $tri solid $blackA;
+		border-left: $tri solid transparent;
+		border-right: $tri solid transparent;
+		bottom: 100%;
+		height: 0;
+		left: $padT * 2;
+		width: 0;
+		@include breakpoint(SMALL){left: $padS * 2;}
+		@include breakpoint(MEDIUM){left: $padM * 2;}
+		@include breakpoint(LARGE){left: $padL * 2;}
+		@include breakpoint(HUGE){left: $padH * 2;}
+	}
+}
+
+.tiles{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li{
+		//background-color: $blackA;
+		float: left;
+		margin: 0 0 2px 0;
+		width: 100%;
+		/*
+		 * change the number of title per row depending on screen size
+		 * if the number per row > 1 then we need to put left and right padding on the tile spacer to create their seperation
+		 */
+		@media only screen and (min-width: 450px) and (max-width: 499px){ // extra media query to split the tiles into two across during the TINY layout taht intitally uses 100%
+			width: 50% !important;
+			.spacer{
+				padding: 0 1px 0 1px !important;
+			}
+		}
+		@media only screen and (min-width: 500px) and (max-width: 599px){width: 100% !important;} // extra media query to split the tiles into one across during the SMALL layout taht intitally uses 50%
+		@include breakpoint(SMALL){
+			width: 50%;
+			.spacer{
+				padding: 0 1px 0 1px;
+			}
+		}
+		@include breakpoint(MEDIUM){
+			width: 33.33333333333%;
+			.spacer{
+				padding: 0 1px 0 1px;
+			}
+		}
+		@include breakpoint(LARGE){
+			width: 33.33333333333%;
+			.spacer{
+				padding: 0 1px 0 1px;
+				}
+		}
+		@include breakpoint(HUGE){
+			width: 33.33333333333%;
+			.spacer{
+				padding: 0 1px 0 1px;
+			}
+		}
+		@media only screen and (min-width: 1800px){ // extra media query to split the tiles into four across during the HUGE layout taht intitally uses 33%
+			width: 25% !important;
+			.spacer{
+				padding: 0 1px 0 1px !important;
+			}
+		}
+
+		.spacer{
+			height: auto;
+			//padding: 0 1px 0 1px;
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+
+
+
